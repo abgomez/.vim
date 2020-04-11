@@ -3,7 +3,7 @@ filetype plugin indent on
 syntax on
 
 execute pathogen#infect()
-Helptags
+:Helptags
 "-------------------------------------------------------------------------------
 " NerdTree Plugin Options
 "-------------------------------------------------------------------------------
@@ -23,3 +23,16 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Airline
 "-------------------------------------------------------------------------------
 let g:airline#extensions#tabline#enabled = 1
+"-------------------------------------------------------------------------------
+" Colorscheme
+"-------------------------------------------------------------------------------
+syntax enable
+" set background=dark
+set number
+let g:solarized_termcolors=256
+if has('gui_running')
+  set background=light
+else
+  set background=dark
+endif
+colorscheme solarized
